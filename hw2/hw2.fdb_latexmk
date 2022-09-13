@@ -1,8 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1663102649 "hw2.tex" "hw2.pdf" "hw2" 1663102650
+["pdflatex"] 1663109597 "c:/Users/Owner/school/networks-cs-2850/hw2/hw2.tex" "hw2.pdf" "hw2" 1663109598
   "C:/Users/Owner/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1663100345 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Owner/AppData/Local/MiKTeX/fonts/pk/ljfour/public/fdsymbol/dpi600/FdSymbolA-Book.pk" 1663101624 33704 0f7c6c307e96cfb91d882bd9f1b97a79 ""
   "C:/Users/Owner/AppData/Local/MiKTeX/fonts/pk/ljfour/public/fdsymbol/dpi600/FdSymbolB-Book.pk" 1663099398 43928 41294151c6319bdf223a8b1816063664 ""
+  "C:/Users/Owner/AppData/Local/MiKTeX/fonts/pk/ljfour/public/fdsymbol/dpi600/FdSymbolC-Book.pk" 1663099397 39820 b99e471344f538a3d6a007bd035577da ""
   "C:/Users/Owner/AppData/Local/MiKTeX/fonts/pk/ljfour/public/fdsymbol/dpi600/FdSymbolF-Book.pk" 1663099396 33832 8aab9f56c34bfe93e38a34cc4237be3c ""
   "C:/Users/Owner/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1663099197 10329961 ce95c55cb4bf0cf6d471f12775aa6eaf ""
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233955454 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -32,6 +33,7 @@
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1247596666 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
+  "C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247596667 32762 7fee39e011c23b3589931effd97b9702 ""
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247596673 34694 870c211f62cb72718a00e353f14f254d ""
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580393758 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -136,8 +138,9 @@
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "hw2.aux" 1663102650 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "hw2.tex" 1663102644 4365 6ff188e02336171c1b68e5dcb0ed6a64 ""
+  "c:/Users/Owner/school/networks-cs-2850/hw2/hw2.tex" 1663109597 6692 f264093fdfbd12ddcf2e064fc5b936db ""
+  "hw2.aux" 1663109598 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
+  "hw2.tex" 1663109597 6692 f264093fdfbd12ddcf2e064fc5b936db ""
   (generated)
   "hw2.aux"
   "hw2.log"

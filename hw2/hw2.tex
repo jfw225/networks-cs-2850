@@ -49,7 +49,7 @@
 
         Given that Player B will always choose column $R$, Player A is better off choosing row $U$ because $\pay{A}{U}{R}>\pay{A}{D}{R}$. Since there is no change in strategy that will result in a better payoff for Player A, $(U,R)$ is the Nash equilibrium.
 
-        \item First, observe that there is no pure strategy that is a part of the Nash equilibrium for this game. That is, there is no strategy that will result in a better payoff for both players. Thus, we must consider mixed strategies. Let $p$ be the probability that Player A chooses row $U$ and $q$ be the probability that Player B chooses column $L$. Then we can write the expected payoffs for each player in terms of $p,q$:
+        \item First, observe that there is no pure strategy that is a part of the Nash equilibrium for this game. That is, there is no strategy that will result in a better payoff for both players. Thus, we must consider mixed-strategies. Let $p$ be the probability that Player A chooses row $U$, and $q$ be the probability that Player B chooses column $L$. Then we can write the expected payoffs for each player in terms of $p,q$:
         \begin{align*}
             \textbf{\underline{Player A:}} && \expp{\pay{A}{U}{\mathcal{C}}} & =q\cdot\pay{A}{U}{L} + (1-q)\cdot\pay{A}{U}{R} \\
             &&& =q+(1-q)\cdot0=q; \\
@@ -64,12 +64,35 @@
         From section 6.7 of the textbook, we know that $\expp{\pay{A}{U}{\mathcal{C}}}=\expp{\pay{A}{D}{\mathcal{C}}}$ and $\expp{\pay{B}{\mathcal{R}}{L}}=\expp{\pay{B}{\mathcal{R}}{R}}$. If this were not the case, we would have a contradiction because we established that there are no pure strategies. Thus, we can solve for $p,q$:
         \begin{align*}
             \expp{\pay{A}{U}{\mathcal{C}}} & =\expp{\pay{A}{D}{\mathcal{C}}} \\
-            do stuff here \\
-            \expp{\pay{B}{\mathcal{R}}{L}} & =\expp{\pay{B}{\mathcal{R}}{R}}
+            q & =1-q \\
+            \Rightarrow q & =\frac{1}{2}; \\
+            \expp{\pay{B}{\mathcal{R}}{L}} & =\expp{\pay{B}{\mathcal{R}}{R}} \\
+            1-p & =p+1 \\
+            \Rightarrow p & =\frac{1}{2}.
         \end{align*}
 
-
+        Therefore, the mixed-strategy Nash equilibrium is $(p=\frac{1}{2},q=\frac{1}{2})$.
     \end{enumerate}
+
+    \item Without loss of generality with respect to the starting player, suppose that Player A goes first and chooses row $U$ each time. Player $B$ will always choose column $L$ because $\pay{B}{U}{L}>\pay{B}{U}{R}$. Notice that from the state $(U,L)$, Player A switching strategies to $D$ will result in a worse payoff. Likewise, Player B switching strategies to $R$ will result in a worse payoff. Thus, $(U,L)$ is a Nash equilibrium that is constituted by pure strategies.
+    
+    On the other hand, suppose that Player A chooses row $D$ each time. Player $B$ will always choose column $R$ because $\pay{B}{D}{R}>\pay{B}{D}{L}$. Once again, Player A switching strategies to $U$ will result in a worse payoff. Likewise, Player B switching strategies to $L$ will result in a worse payoff. Thus, $(D,R)$ is a Nash equilibrium that is constituted by pure strategies.
+
+    Although there exist equilibria that are constituted by pure strategies, each Player's best response is dependent on the other Player's strategy. Thus, neither player has a strategy that is uniquely the best response to the other player's strategy. Thus, neither play has a dominant strategy and a mixed-strategy equilibrium exists. We can solve for the mixed-strategy Nash equilibrium in the same way as in part (c) of the previous question (let $p$ and $q$ be defined as before):
+    \begin{align*}
+        \textbf{\underline{Player A:}} && \expp{\pay{A}{U}{\mathcal{C}}} & =\expp{\pay{A}{D}{\mathcal{C}}} \\
+        && q\cdot\pay{A}{U}{L} + (1-q)\cdot\pay{A}{U}{R} & =q\cdot\pay{A}{D}{L} + (1-q)\cdot\pay{A}{D}{R} \\
+        && 5q + 3(1-q) & =4q + 7(1-q) \\
+        && 2q+3 & =7-3q \\
+        && q & =\frac{4}{5}; \\
+        \textbf{\underline{Player B:}} && \expp{\pay{B}{\mathcal{R}}{L}} & =\expp{\pay{B}{\mathcal{R}}{R}} \\
+        && p\cdot\pay{B}{U}{L} + (1-p)\cdot\pay{B}{D}{L} & =p\cdot\pay{B}{U}{R} + (1-p)\cdot\pay{B}{D}{R} \\
+        && 1p+1(1-p) & =0p+2(1-p) \\
+        && p & =\frac{1}{2}.
+    \end{align*}
+
+    Therefore, there is also a mixed-strategy Nash equilibrium of 
+    $$(p=\frac{1}{2},q=\frac{4}{5}).$$
 \end{enumerate}
 
 \end{document}
