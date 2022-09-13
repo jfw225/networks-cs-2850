@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,enumerate,xcolor,graphicx,amsthm,url,fdsymbol,tikz,enumitem}
+\usepackage{algorithm, algpseudocode, float}
+
+ \graphicspath{ {./assets/} } 
+\newcommand{\dist}[2]{#1\Leftrightarrow#2}
+\newcommand{\image}[1]{\begin{figure}[H]
+            \includegraphics[scale=.65]{#1}
+            \centering
+        \end{figure}}
+
+\title{CS 2850 -- Networks}
+\author{jfw225 }
+\date{August 2022}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+    \item 
+    \begin{enumerate}
+        \item Let $\mathcal{C}$ be the set of cities $A$ through $L$. Then the resulting number of connected components after removing city $c\in\mathcal{C}$ is given by the following table:  
+        $$\begin{tabular}{||c | c||} 
+            \hline
+            City $c$ & \# of Connected Components \\ [0.5ex] 
+            \hline\hline
+            $A$ & 1 \\
+            $B$ & 1 \\
+            $C$ & 1 \\ 
+            $D$ & 1 \\
+            $E$ & 1 \\
+            $F$ & 6 \\
+            $G$ & 2 \\
+            $H$ & 2 \\
+            $I$ & 2 \\
+            $J$ & 2 \\
+            $K$ & 2 \\
+            $L$ & 1 \\
+            \hline
+        \end{tabular}$$
+
+        \item Let $\dist{a}{b}$ denote the distance between two cities $a,b\in\mathcal{C}$. If we start at city $I$ and go to $L$, we must travel on three roads (edges), and thus, $\dist{I}{L}=3$. Notice that there are no cities to the "right" of $I$ that are farther away from $I$ than $L$. More rigidly, $\dist{I}{L}>\dist{I,K}>\dist{I,J}$. Using the same logic, it follows that cities $\mathcal{L}=\{A,B,C,D,E\}$ are the farthest cities to the "left" of $I$. Moreover, it is clear that the $I$ is equidistant from each city in $\mathcal{L}$, or rather it is true that $\dist{I}{a}=\dist{I}{b}=4$ for all $a,b\in\mathcal{L}$. Therefore, city $I$ has the desired property.
+
+        \item City $F$ has the desired property because 
+        $$\frac{1}{11}\sum_{c\in\mathcal{C}} \dist{I}{c}\approx2.4\leq2.5.$$
+
+        \item If you were to compute the max distance for every city, you would find that only $H$ and $I$ satisfy the property in (b). Performing the same procedure to find the cities that satisfy the property in (c) yields $F$ and $G$. Therefore, no city satisfies both properties.
+    \end{enumerate}
+
+    \item 
+    \begin{enumerate}
+        \item The following is the visibility graph for the scene in Figure 4:
+
+        \image{hw1q2a}
+
+        \item The following is the visibility graph for Figure 5:
+
+        \image{hw1q2b}
+
+        \item This is possible and is given by the following graph
+
+        \image{hw1q2c}
+
+        \item This is possible and is given by the following graph
+
+        \image{hw1q2d}
+        
+
+        
+    \end{enumerate}
+
+    \item
+    \begin{enumerate}
+        \item The following graph satisfies the question:
+
+        \image{hw1q3a.png}
+
+        \item Here is a graph with the same structure, but it contains strong/weak labels:
+
+        \image{hw1q3b.png}
+
+        \item 
+        \textbf{\underline{Observation:}} Some student $s$ violates the Strong Triadic Closure Property if and only if $s$ is strongly connected to some student $a$, $s$ is strongly connected to some student $b$, and $a$ and $b$ are not connected at all.
+        
+        If we look at our graph from (b), it's clear that Zoe and Yvette have a strong connection. Additionally, Yvette and Wendy have a strong connection. Thus, there needs to be a connection between Wendy and Zoe for Yvette to satisfy the property. Since there is no connection between Wendy and Zoe, Yvette violates the property. Notice that there are no other students whose strong connections are not mutually connected. Therefore, Yvette is the only student that violates the Strong Triadic Closure Property, and all other students satisfy the property.
+    \end{enumerate}
+
+    \item 
+    \begin{enumerate}
+        \item 
+        \textbf{\underline{Observation:}} The property is violated if a student on floor $i$ has a strong connection with a student on floor $j$ named $s_j$ and a strong connection with a student on floor $k$ named $s_k$, but $s_j$ and $s_k$ are not connected s.t. $i\not=j\not=k$. 
+        
+        Since each student on floors 2, 3, and 4 does not have a strong connection with a student from a different floor, these students satisfy the Strong Triadic Closure Property. 
+
+        However, each student on the first floor has a strong connection with each student on the second floor. Additionally, each student on the first floor has a strong connection with each student on the third floor. Since each student on the second floor has no connection to any student on the third floor, every student on the first floor violates the Strong Triadic Closure Property.
+
+        \item Notice that in this case, no student on floor $i$ (call them $s_i$) has a strong connection to a student $s_j$ on floor $j$ and a strong connection to a student $s_k$ on floor $k$ s.t. $i\not=j\not=k$. The instance in which a student has more than one strong connection is between other students on the same floor, who are all strongly interconnected. Therefore, every student satisfies the Strong Triadic Closure Property.
+    \end{enumerate}
+
+    \item It is likely the case that node $E$ is the spam account. Since real accounts often communicate within the same network, you would expect the connections of a real account to have a closed loop within one degree of connection. However, the connections of $E$, namely $A,B,N$ share no first-degree connections which significantly increases the probability that $E$ is a spam account.
+\end{enumerate}
+
+\end{document}

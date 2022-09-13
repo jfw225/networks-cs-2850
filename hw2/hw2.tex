@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,enumerate,xcolor,graphicx,amsthm,url,fdsymbol,tikz,enumitem}
+\usepackage{algorithm, algpseudocode, float}
+
+ \graphicspath{ {./assets/} } 
+\newcommand{\dist}[2]{#1\Leftrightarrow#2}
+\newcommand{\image}[1]{\begin{figure}[H]
+            \includegraphics[scale=.65]{#1}
+            \centering
+        \end{figure}}
+
+\newcommand{\pay}[3]{\psi\left(#1,#2,#3\right)}
+\newcommand{\prob}[1]{\mathbb{P}\left( #1 \right)}
+\newcommand{\pmf}[2]{p_{#1}\left( #2 \right)}
+\newcommand{\pdf}[2]{f_{#1}\left( #2 \right)}
+\newcommand{\cdf}[2]{F_{#1}\left( #2 \right)}
+\newcommand{\modd}[1]{~\mathrm{mod}\,\left[ #1 \right]}
+\newcommand{\expp}[1]{\mathbb{E}\left[ #1 \right]}
+\newcommand{\varr}[1]{\mathbb{V}\left[ #1 \right]}
+\newcommand{\covv}[1]{\mathbb{C}\left[ #1 \right]}
+
+\title{CS 2850 -- Networks}
+\author{jfw225 }
+\date{August 2022}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+    \item 
+    Let $\pay{\mathcal{P}}{\mathcal{R}}{\mathcal{C}}$ be the payoff for player 
+    $\mathcal{P}\in\left\{A,B\right\}$ for row $\mathcal{R}\in\left\{U,D\right\}$ 
+    and column $\mathcal{C}\in\left\{L,R\right\}$. Additionally, let $\expp{\pay{\mathcal{P}}{\mathcal{R}}{\mathcal{C}}}$ be the expected payoff for player $\mathcal{P}$ for row $\mathcal{R}$ and column $\mathcal{C}$.
+    
+    \begin{enumerate}
+        \item The dominant strategy for Player A is always to choose row $D$ 
+        because they will always have a better payoff than if they picked row 
+        $U$, regardless of the column chosen by player B. More rigidly, $\pay{A}{D}{\mathcal{C}}>\pay{A}{U}{\mathcal{C}}$ for all $\mathcal{C}\in\left\{L,R\right\}$.
+
+        Likewise, the dominant strategy for Player B is always to choose row $R$ because $\pay{B}{\mathcal{R}}{R}>\pay{B}{\mathcal{R}}{L}$ for all $\mathcal{R}\in\left\{U,D\right\}$.
+
+        Therefore, the Nash equilibrium is $(D,R)$.
+
+        \item Unlike the in part (a), Player A does not have a dominant strategy. That is, Player A cannot guarantee a better payoff by simply always picking some row. 
+        
+        However, Player B does have a dominant strategy, which is to always pick column $R$. This is because $\pay{B}{\mathcal{R}}{R}>\pay{B}{\mathcal{R}}{L}$ for all $\mathcal{R}\in\left\{U,D\right\}$.
+
+        Given that Player B will always choose column $R$, Player A is better off choosing row $U$ because $\pay{A}{U}{R}>\pay{A}{D}{R}$. Since there is no change in strategy that will result in a better payoff for Player A, $(U,R)$ is the Nash equilibrium.
+
+        \item First, observe that there is no pure strategy that is a part of the Nash equilibrium for this game. That is, there is no strategy that will result in a better payoff for both players. Thus, we must consider mixed strategies. Let $p$ be the probability that Player A chooses row $U$ and $q$ be the probability that Player B chooses column $L$. Then we can write the expected payoffs for each player in terms of $p,q$:
+        \begin{align*}
+            \textbf{\underline{Player A:}} && \expp{\pay{A}{U}{\mathcal{C}}} & =q\cdot\pay{A}{U}{L} + (1-q)\cdot\pay{A}{U}{R} \\
+            &&& =q+(1-q)\cdot0=q; \\
+            && \expp{\pay{A}{D}{\mathcal{C}}} & =q\cdot\pay{A}{D}{L} + (1-q)\cdot\pay{A}{D}{R} \\
+            &&& =q\cdot0+(1-q)\cdot1=1-q; \\
+            \textbf{\underline{Player B:}} && \expp{\pay{B}{\mathcal{R}}{L}} & =p\cdot\pay{B}{U}{L} + (1-p)\cdot\pay{B}{D}{L} \\\
+            &&& =p\cdot1+(1-p)\cdot2=1-p; \\
+            && \expp{\pay{B}{\mathcal{R}}{R}} & =p\cdot\pay{B}{U}{R} + (1-p)\cdot\pay{B}{D}{R} \\
+            &&& =p\cdot2+(1-p)\cdot1=p+1.
+        \end{align*}
+
+        From section 6.7 of the textbook, we know that $\expp{\pay{A}{U}{\mathcal{C}}}=\expp{\pay{A}{D}{\mathcal{C}}}$ and $\expp{\pay{B}{\mathcal{R}}{L}}=\expp{\pay{B}{\mathcal{R}}{R}}$. If this were not the case, we would have a contradiction because we established that there are no pure strategies. Thus, we can solve for $p,q$:
+        \begin{align*}
+            \expp{\pay{A}{U}{\mathcal{C}}} & =\expp{\pay{A}{D}{\mathcal{C}}} \\
+            do stuff here \\
+            \expp{\pay{B}{\mathcal{R}}{L}} & =\expp{\pay{B}{\mathcal{R}}{R}}
+        \end{align*}
+
+
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
