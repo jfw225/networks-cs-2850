@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.9.13)  13 SEP 2022 18:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.9.13)  13 SEP 2022 19:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -594,7 +594,7 @@ Overfull \hbox (72.06032pt too wide) detected at line 92
 []
  []
 
-[2] [3] (hw2.aux) ) 
+[2] [3] [4] (hw2.aux) ) 
 Here is how much of TeX's memory you used:
  17044 strings out of 478338
  323154 string characters out of 2836700
@@ -602,11 +602,11 @@ Here is how much of TeX's memory you used:
  35197 multiletter control sequences out of 15000+600000
  485601 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,13n,80p,557b,395s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 84i,13n,80p,702b,395s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\Owner\AppData\Local\MiKTeX\fonts/pk/ljfour/public/fdsymbol/dpi600\FdSymbolC-Book.pk> <C:\Users\Owner\AppData\Local\MiKTeX\fonts/pk/ljfour/public/fdsymbol/dpi600\FdSymbolA-Book.pk> <C:\Users\Owner\AppData\Local\MiKTeX\fonts/pk/ljfour/public/fdsymbol/dpi600\FdSymbolB-Book.pk> <C:\Users\Owner\AppData\Local\MiKTeX\fonts/pk/ljfour/public/fdsymbol/dpi600\FdSymbolF-Book.pk><C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on hw2.pdf (3 pages, 102717 bytes).
+Output written on hw2.pdf (4 pages, 107152 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
+ 87 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

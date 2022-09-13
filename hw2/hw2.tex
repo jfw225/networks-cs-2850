@@ -93,6 +93,27 @@
 
     Therefore, there is also a mixed-strategy Nash equilibrium of 
     $$(p=\frac{1}{2},q=\frac{4}{5}).$$
+
+    \item Let $\pay{\mathcal{P}}{\mathcal{R}}{\mathcal{C}}$ be the payoff for player $\mathcal{P}\in\left\{A,B\right\}$ for row $\mathcal{R}\in\left\{X,Y,Z\right\}$ and column $\mathcal{C}\in\left\{R,S,T,U\right\}$.
+    \begin{enumerate}
+        \item Suppose that Player A starts and chooses row $X$. Then Player B will choose column $R$ because it has the highest payoff. Now suppose that instead, Player A starts and chooses row $Y$. Then Player B will choose column $T$ because it has the highest payoff. Thus, Player B does not have a dominant strategy. 
+        
+        On the other hand, suppose that Player B starts and chooses column $S$. Then Player A will choose row $X$ because it has the highest payoff. Now suppose that instead, Player B starts and chooses column $T$. Then Player A will choose row $Y$ because it has the highest payoff. Thus, Player A does not have a dominant strategy.
+        
+        Therefore, neither player has a dominant strategy.
+
+        \item Notice that $\pay{A}{Y}{\mathcal{C}}>\pay{A}{Z}{\mathcal{C}}$ for all $\mathcal{C}\in\left\{R,S,T,U\right\}$. More clearly, Player A will always choose row $Y$ over row $Z$ regardless of the column because it has a higher payoff. Thus, strategy $Z$ is strictly dominated by strategy $Y$. This is the only strictly dominated strategy for Player A.
+        
+        For Player B, we observe that several strategies that fit this criteria: 
+        \begin{align*}
+            \pay{B}{\mathcal{R}}{T} & >\pay{B}{\mathcal{R}}{S} \\
+            \pay{B}{\mathcal{R}}{T} & >\pay{B}{\mathcal{R}}{U} \\
+            \pay{B}{\mathcal{R}}{R} & >\pay{B}{\mathcal{R}}{U} \\
+        \end{align*}
+        for all $\mathcal{R}\in\left\{X,Y,Z\right\}$. Therefore, strategies $S$ and $U$ are strictly dominated by strategy $T$, and strategy $U$ is also strictly dominated by strategy $R$. Thus, there are three strictly dominated strategies for Player B.
+
+        \item Using my answer in (b) to help, we can see that whenever Player A chooses row $X$, Player $B$ will choose column $R$. Since neither player is better off choosing another strategy from this state, $(X,R)$ is a Nash equilibrium that is constituted by pure strategies. Similarly, whenever Player A chooses row $Y$, Player $B$ will choose column $T$. Since neither player is better off choosing another strategy from this state, $(Y,T)$ is also a Nash equilibrium that is constituted by pure strategies. Notice that strategy $Z$ can never be a part of a Nash equilibrium because it is strictly dominated by strategy $Y$.
+    \end{enumerate}
 \end{enumerate}
 
 \end{document}

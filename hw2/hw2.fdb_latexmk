@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1663109597 "c:/Users/Owner/school/networks-cs-2850/hw2/hw2.tex" "hw2.pdf" "hw2" 1663109598
+["pdflatex"] 1663112965 "c:/Users/Owner/school/networks-cs-2850/hw2/hw2.tex" "hw2.pdf" "hw2" 1663112966
   "C:/Users/Owner/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1663100345 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Owner/AppData/Local/MiKTeX/fonts/pk/ljfour/public/fdsymbol/dpi600/FdSymbolA-Book.pk" 1663101624 33704 0f7c6c307e96cfb91d882bd9f1b97a79 ""
   "C:/Users/Owner/AppData/Local/MiKTeX/fonts/pk/ljfour/public/fdsymbol/dpi600/FdSymbolB-Book.pk" 1663099398 43928 41294151c6319bdf223a8b1816063664 ""
@@ -138,9 +138,9 @@
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "c:/Users/Owner/school/networks-cs-2850/hw2/hw2.tex" 1663109597 6692 f264093fdfbd12ddcf2e064fc5b936db ""
-  "hw2.aux" 1663109598 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
-  "hw2.tex" 1663109597 6692 f264093fdfbd12ddcf2e064fc5b936db ""
+  "c:/Users/Owner/school/networks-cs-2850/hw2/hw2.tex" 1663112964 9287 711092c1638e20fd1a209a63c8289d61 ""
+  "hw2.aux" 1663112965 32 c81c40425fbb5e93b90fba65da0b5e61 "pdflatex"
+  "hw2.tex" 1663112964 9287 711092c1638e20fd1a209a63c8289d61 ""
   (generated)
   "hw2.aux"
   "hw2.log"
