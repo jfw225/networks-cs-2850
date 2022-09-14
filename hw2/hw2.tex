@@ -2,11 +2,12 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,enumerate,xcolor,graphicx,amsthm,url,fdsymbol,tikz,enumitem}
 \usepackage{algorithm, algpseudocode, float}
+\usepackage{multirow, array}
 
  \graphicspath{ {./assets/} } 
 \newcommand{\dist}[2]{#1\Leftrightarrow#2}
 \newcommand{\image}[1]{\begin{figure}[H]
-            \includegraphics[scale=.65]{#1}
+            \includegraphics[scale=.4]{#1}
             \centering
         \end{figure}}
 
@@ -113,6 +114,65 @@
         for all $\mathcal{R}\in\left\{X,Y,Z\right\}$. Therefore, strategies $S$ and $U$ are strictly dominated by strategy $T$, and strategy $U$ is also strictly dominated by strategy $R$. Thus, there are three strictly dominated strategies for Player B.
 
         \item Using my answer in (b) to help, we can see that whenever Player A chooses row $X$, Player $B$ will choose column $R$. Since neither player is better off choosing another strategy from this state, $(X,R)$ is a Nash equilibrium that is constituted by pure strategies. Similarly, whenever Player A chooses row $Y$, Player $B$ will choose column $T$. Since neither player is better off choosing another strategy from this state, $(Y,T)$ is also a Nash equilibrium that is constituted by pure strategies. Notice that strategy $Z$ can never be a part of a Nash equilibrium because it is strictly dominated by strategy $Y$.
+    \end{enumerate}
+
+    \item 
+    \begin{enumerate}
+        \item The payoff matrix is as follows:
+
+        \begin{table}[H]
+            \centering
+            \setlength{\extrarowheight}{2pt}
+            \begin{tabular}{cc|c|c|}
+              & \multicolumn{1}{c}{} & \multicolumn{2}{c}{Defender}\\
+              & \multicolumn{1}{c}{} & \multicolumn{1}{c}{$A$}  & \multicolumn{1}{c}{$B$} \\\cline{3-4}
+              \multirow{2}*{Attacker}  & $A$ & $(l,w)$ & $(w,l)$ \\\cline{3-4}
+              & $B$ & $(w,l)$ & $(l,w)$ \\\cline{3-4}
+            \end{tabular}
+        \end{table}
+    
+        \item Since there is no state in which both parties can win, the losing player is always better off picking the strategy that they did not choose. Thus, there is no pure strategy equilibrium for this game.
+        
+        \item Since there is no pure strategy equilibrium, we can use the same method as in (2) to find the mixed-strategy equilibrium. Let $p$ be the probability that the attacker chooses strategy $A$, and let $q$ be the probability that the defender chooses strategy $A$:
+        \begin{align*}
+            \textbf{\underline{Player X:}} && l\cdot q + w\cdot (1-q) & =w\cdot q + l\cdot (1-q) \\
+            && 2lq-2wq & =l-w \\
+            && q & =\frac{(l-w)}{2(l-w)}=\frac{1}{2}; \\
+            \textbf{\underline{Player Y:}} && w\cdot p + l\cdot (1-p) & =l\cdot p + w\cdot (1-p) \\
+            && 2w\cdot p - w & =2l\cdot p+l \\
+            && 2wp-2lp & =w-l \\
+            && p & =\frac{(w-l)}{2(w-l)}=\frac{1}{2}.
+        \end{align*}
+        Solving these equations yields $p=q=\frac{1}{2}$, which is the mixed-strategy equilibrium.
+
+        \item When solving above, we can see that the parts of the equations that contain $l$ and $w$ cancel out. Thus, the actual values of $l$ and $w$ do not impact the probabilities.
+
+\end{enumerate}
+
+    \item 
+    \begin{enumerate}
+        \item Below is the graph described by the given rule where blue edges indicate two nodes are allies and red edges indicate that two nodes are enemies: 
+        \image{assets/q5a.png}
+        If there exists a set of three nodes such that there is only one edge between enemies and two edges between allies, then the graph is not structurally balanced. This occurs at least once in the graph above, namely, for $A,F,H$:
+
+        \image{assets/q5a2.png}
+
+        Therefore, this graph is not structurally balanced.
+        \pagebreak
+
+        \item The following graph shows this relationship where every edge between two nodes indicates an alliance:
+        
+        \image{assets/q5b.png}
+
+        According to the Balance Theorem from the textbook, this graph is structurally balanced because we can split the nodes into two groups $X=\{A,B,C,D,E,F,G,H\}$ and $Y=\{I,J,K,L\}$ such that "each pair of people in $X$ likes each other, each pair of people in $Y$ likes each other, and everyone in $X$ is the enemy of everyone in $Y$." Thus, this graph is structurally balanced.
+
+        \item Under the given constraint, it would be the case that $J$ is an enemy of $K$, $K$ is an enemy of $L$, and $L$ is an enemy of $J$. Thus, there is a set of three nodes that are all mutual enemies. Therefore, this graph is not structurally balanced.
+        
+        \pagebreak
+        \item The following graph shows this relationship where every edge between two nodes indicates an alliance:
+        \image{assets/q5d.png}
+
+        According to the Balance Theorem from the textbook, this graph is structurally balanced because we can split the nodes into two groups $X=\{A,B,C,D,E,F,G,H,I,J,K\}$ and $Y=\{L\}$ such that "each pair of people in $X$ likes each other, each pair of people in $Y$ likes each other, and everyone in $X$ is the enemy of everyone in $Y$." Thus, this graph is structurally balanced.
     \end{enumerate}
 \end{enumerate}
 

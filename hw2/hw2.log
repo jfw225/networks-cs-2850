@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.9.13)  13 SEP 2022 19:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.9.13)  14 SEP 2022 19:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -462,40 +462,55 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip58
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
+) (C:\Users\Owner\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip59
+\multirow@cntb=\count304
+\multirow@dima=\skip60
+\bigstrutjot=\dimen257
+) (C:\Users\Owner\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen258
+\ar@mcellbox=\box67
+\extrarowheight=\dimen259
+\NC@list=\toks49
+\extratabsurround=\skip61
+\backup@length=\skip62
+\ar@cellbox=\box68
 ) (C:\Users\Owner\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-07-01 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count304
-\l__pdf_internal_box=\box67
+\l__color_backend_stack_int=\count305
+\l__pdf_internal_box=\box69
 ) (hw2.aux)
 \openout1 = `hw2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
  (C:\Users\Owner\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count305
-\scratchdimen=\dimen257
-\scratchbox=\box68
-\nofMPsegments=\count306
-\nofMParguments=\count307
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count308
-\MPscratchDim=\dimen258
-\MPnumerator=\count309
-\makeMPintoPDFobject=\count310
-\everyMPtoPDFconversion=\toks50
+\scratchcounter=\count306
+\scratchdimen=\dimen260
+\scratchbox=\box70
+\nofMPsegments=\count307
+\nofMParguments=\count308
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count309
+\MPscratchDim=\dimen261
+\MPnumerator=\count310
+\makeMPintoPDFobject=\count311
+\everyMPtoPDFconversion=\toks51
 ) (C:\Users\Owner\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -503,110 +518,139 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 LaTeX Font Info:    Font shape `U/FdSymbolA/m/n' will be
-(Font)              scaled to size 12.0pt on input line 29.
+(Font)              scaled to size 12.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolA/m/n' will be
-(Font)              scaled to size 8.0pt on input line 29.
+(Font)              scaled to size 8.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolA/m/n' will be
-(Font)              scaled to size 6.0pt on input line 29.
+(Font)              scaled to size 6.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolE/m/n' will be
-(Font)              scaled to size 12.0pt on input line 29.
+(Font)              scaled to size 12.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolE/m/n' will be
-(Font)              scaled to size 8.0pt on input line 29.
+(Font)              scaled to size 8.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolE/m/n' will be
-(Font)              scaled to size 6.0pt on input line 29.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
+(Font)              scaled to size 6.0pt on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
  (C:\Users\Owner\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
  (C:\Users\Owner\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
-(Font)              scaled to size 12.0pt on input line 29.
+(Font)              scaled to size 12.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
-(Font)              scaled to size 8.0pt on input line 29.
+(Font)              scaled to size 8.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
-(Font)              scaled to size 6.0pt on input line 29.
+(Font)              scaled to size 6.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolC/m/n' will be
-(Font)              scaled to size 12.0pt on input line 29.
+(Font)              scaled to size 12.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolC/m/n' will be
-(Font)              scaled to size 8.0pt on input line 29.
+(Font)              scaled to size 8.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolC/m/n' will be
-(Font)              scaled to size 6.0pt on input line 29.
+(Font)              scaled to size 6.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolD/m/n' will be
-(Font)              scaled to size 12.0pt on input line 29.
+(Font)              scaled to size 12.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolD/m/n' will be
-(Font)              scaled to size 8.0pt on input line 29.
+(Font)              scaled to size 8.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolD/m/n' will be
-(Font)              scaled to size 6.0pt on input line 29.
+(Font)              scaled to size 6.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 29.
+(Font)              scaled to size 12.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 29.
+(Font)              scaled to size 8.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 29.
+(Font)              scaled to size 6.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolA/m/n' will be
-(Font)              scaled to size 10.0pt on input line 33.
+(Font)              scaled to size 10.0pt on input line 34.
 LaTeX Font Info:    Font shape `U/FdSymbolA/m/n' will be
-(Font)              scaled to size 7.0pt on input line 33.
+(Font)              scaled to size 7.0pt on input line 34.
 LaTeX Font Info:    Font shape `U/FdSymbolA/m/n' will be
-(Font)              scaled to size 5.0pt on input line 33.
+(Font)              scaled to size 5.0pt on input line 34.
 LaTeX Font Info:    Font shape `U/FdSymbolE/m/n' will be
-(Font)              scaled to size 10.0pt on input line 33.
+(Font)              scaled to size 10.0pt on input line 34.
 LaTeX Font Info:    Font shape `U/FdSymbolE/m/n' will be
-(Font)              scaled to size 7.0pt on input line 33.
+(Font)              scaled to size 7.0pt on input line 34.
 LaTeX Font Info:    Font shape `U/FdSymbolE/m/n' will be
-(Font)              scaled to size 5.0pt on input line 33.
+(Font)              scaled to size 5.0pt on input line 34.
 LaTeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
-(Font)              scaled to size 10.0pt on input line 33.
+(Font)              scaled to size 10.0pt on input line 34.
 LaTeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
-(Font)              scaled to size 7.0pt on input line 33.
+(Font)              scaled to size 7.0pt on input line 34.
 LaTeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
-(Font)              scaled to size 5.0pt on input line 33.
+(Font)              scaled to size 5.0pt on input line 34.
 LaTeX Font Info:    Font shape `U/FdSymbolC/m/n' will be
-(Font)              scaled to size 10.0pt on input line 33.
+(Font)              scaled to size 10.0pt on input line 34.
 LaTeX Font Info:    Font shape `U/FdSymbolC/m/n' will be
-(Font)              scaled to size 7.0pt on input line 33.
+(Font)              scaled to size 7.0pt on input line 34.
 LaTeX Font Info:    Font shape `U/FdSymbolC/m/n' will be
-(Font)              scaled to size 5.0pt on input line 33.
+(Font)              scaled to size 5.0pt on input line 34.
 LaTeX Font Info:    Font shape `U/FdSymbolD/m/n' will be
-(Font)              scaled to size 10.0pt on input line 33.
+(Font)              scaled to size 10.0pt on input line 34.
 LaTeX Font Info:    Font shape `U/FdSymbolD/m/n' will be
-(Font)              scaled to size 7.0pt on input line 33.
+(Font)              scaled to size 7.0pt on input line 34.
 LaTeX Font Info:    Font shape `U/FdSymbolD/m/n' will be
-(Font)              scaled to size 5.0pt on input line 33.
+(Font)              scaled to size 5.0pt on input line 34.
 LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 33.
+(Font)              scaled to size 10.0pt on input line 34.
 LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 33.
+(Font)              scaled to size 7.0pt on input line 34.
 LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
-(Font)              scaled to size 5.0pt on input line 33.
+(Font)              scaled to size 5.0pt on input line 34.
 
-Overfull \hbox (1.12875pt too wide) detected at line 62
+Overfull \hbox (1.12875pt too wide) detected at line 63
 []
  []
 
 [1
 
 {C:/Users/Owner/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Overfull \hbox (72.06032pt too wide) detected at line 92
+Overfull \hbox (72.06032pt too wide) detected at line 93
 []
  []
 
-[2] [3] [4] (hw2.aux) ) 
+[2] [3]
+<assets/q5a.png, id=26, 906.2658pt x 508.7808pt>
+File: assets/q5a.png Graphic file (type png)
+<use assets/q5a.png>
+Package pdftex.def Info: assets/q5a.png  used on input line 155.
+(pdftex.def)             Requested size: 362.4999pt x 203.50871pt.
+
+Overfull \hbox (17.4999pt too wide) in paragraph at lines 155--155
+ [][] 
+ []
+
+[4]
+<assets/q5a2.png, id=31, 572.3784pt x 425.6703pt>
+File: assets/q5a2.png Graphic file (type png)
+<use assets/q5a2.png>
+Package pdftex.def Info: assets/q5a2.png  used on input line 158.
+(pdftex.def)             Requested size: 228.9473pt x 170.26509pt.
+ [5 <./assets/q5a.png> <./assets/q5a2.png>]
+<assets/q5b.png, id=37, 560.8152pt x 426.393pt>
+File: assets/q5b.png Graphic file (type png)
+<use assets/q5b.png>
+Package pdftex.def Info: assets/q5b.png  used on input line 165.
+(pdftex.def)             Requested size: 224.3221pt x 170.55417pt.
+ [6 <./assets/q5b.png>]
+<assets/q5d.png, id=42, 685.8423pt x 327.3831pt>
+File: assets/q5d.png Graphic file (type png)
+<use assets/q5d.png>
+Package pdftex.def Info: assets/q5d.png  used on input line 173.
+(pdftex.def)             Requested size: 274.33206pt x 130.95091pt.
+ [7 <./assets/q5d.png>] (hw2.aux) ) 
 Here is how much of TeX's memory you used:
- 17044 strings out of 478338
- 323154 string characters out of 2836700
- 577322 words of memory out of 3000000
- 35197 multiletter control sequences out of 15000+600000
+ 17213 strings out of 478338
+ 326097 string characters out of 2836700
+ 579105 words of memory out of 3000000
+ 35354 multiletter control sequences out of 15000+600000
  485601 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,13n,80p,702b,395s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 84i,13n,80p,702b,499s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\Owner\AppData\Local\MiKTeX\fonts/pk/ljfour/public/fdsymbol/dpi600\FdSymbolC-Book.pk> <C:\Users\Owner\AppData\Local\MiKTeX\fonts/pk/ljfour/public/fdsymbol/dpi600\FdSymbolA-Book.pk> <C:\Users\Owner\AppData\Local\MiKTeX\fonts/pk/ljfour/public/fdsymbol/dpi600\FdSymbolB-Book.pk> <C:\Users\Owner\AppData\Local\MiKTeX\fonts/pk/ljfour/public/fdsymbol/dpi600\FdSymbolF-Book.pk><C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on hw2.pdf (4 pages, 107152 bytes).
+Output written on hw2.pdf (7 pages, 301296 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
+ 107 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
