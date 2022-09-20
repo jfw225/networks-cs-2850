@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,enumerate,xcolor,graphicx,amsthm,url,fdsymbol,tikz,enumitem}
+\usepackage{algorithm, algpseudocode, float}
+\usepackage{multirow, array}
+
+ \graphicspath{ {./assets/} } 
+\newcommand{\dist}[2]{#1\Leftrightarrow#2}
+\newcommand{\image}[1]{\begin{figure}[H]
+            \includegraphics[scale=.4]{#1}
+            \centering
+        \end{figure}}
+
+\newcommand{\pay}[2]{\psi_{#1}\left(#2\right)}
+\newcommand{\prob}[1]{\mathbb{P}\left( #1 \right)}
+\newcommand{\pmf}[2]{p_{#1}\left( #2 \right)}
+\newcommand{\pdf}[2]{f_{#1}\left( #2 \right)}
+\newcommand{\cdf}[2]{F_{#1}\left( #2 \right)}
+\newcommand{\modd}[1]{~\mathrm{mod}\,\left[ #1 \right]}
+\newcommand{\expp}[1]{\mathbb{E}\left[ #1 \right]}
+\newcommand{\varr}[1]{\mathbb{V}\left[ #1 \right]}
+\newcommand{\covv}[1]{\mathbb{C}\left[ #1 \right]}
+
+\title{CS 2850 -- Networks HW 3}
+\author{jfw225 }
+\date{September 2022}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+    \item Let $b_i$ be the bid made by the $i$-th bidder, and let $b_j$ be the bid made by the $j$-th bidder where $i,j\in\{2,3\}$ and $i\neq j$. Suppose that bidder $i$ bids at least as much as bidder $j$ (i.e. $b_i\geq b_j$). In order to win, we must bid $b_1>b_i$ for the item. Since this is a second-price sealed-bid auction, we will pay $b_i$ for the item if we win which yields a payoff of $v_1-b_i$. If instead we lose the auction, then our payoff is zero. From this, we consider two cases:
+    \begin{itemize}
+        \item \underline{\textbf{Case 1:} $\mathbf{b_i>v_1}$} If $b_i>v_1$ is the second highest bet and we won the auction, then it must be the case that we bid more than $v_1$. In this case, we are guaranteed to have a payoff of $v_1-b_i\leq0$. Notice that winning when $b_i>v_1$ is at best as valuable as not playing at all. Thus, we should never bid more than $v_1$ when $b_i>v_1$.
+        \item \underline{\textbf{Case 2:} $\mathbf{b_i\leq v_1}$} In this case, we know that both $b_i$ and $b_j$ are at most $v_i$. We will still pay $b_i$ for the item, but we are guaranteed to have a payoff of at least zero. More specifically, our payoff is $v_1-b_i\geq0$. Notice that when $b_i\leq v_1$, a bid of $b_1=v_i$ is guaranteed to yield the exact same payoff as a bid of $b_1>v_i$.
+    \end{itemize}
+
+    Thus, bidding above $v_1=30$ never increases the payoff and only adds additional risk. Therefore, our friend is incorrect and we should never bid more than 30.
+
+    \item Let $\pay{i}{R,v_i,b_i,b_j}$ be the payoff for bidder $i$ when placing a bid of $b_i$ for an object valued at $v_i$ while facing off in a two-buyer auction against some other bidder $j$ who places a bid of $b_j$. In addition, the auction is a second-price auction with a reserve price $R$. Let us further define this payoff function as 
+    $$\pay{i}{R,v_i,b_i,b_j}=\begin{cases}
+        0 & \text{if } b_i\leq b_j\text{ or } b_i\leq R, \\
+        v_i-\max\{b_j,R\} & \text{if } b_i>b_i \text{ and } b_i>R.
+    \end{cases}.$$
+    \begin{enumerate}
+        \item Let us refer to the opposing buyer as bidder $j$ and ourselves as bidder $i$. From the question, we know that $R=10$ and our value is $v_i=15$. Our goal is to bid such that our expected payoff is maximized, or rather, pick a value $b_i$ such that $\expp{\pay{i}{R,v_i,b_i,b_j}}_{b_j}$ is maximized, where the expected payoff is given by
+        \begin{align*}
+            \expp{\pay{i}{R,v_i,b_i,b_j}}_{b_j} & =\sum_{b\in\{5,10,15\}} \prob{b_j=b}\cdot\pay{i}{R=10,v_i=15,b_i,b_j=b}. \\
+        \end{align*}
+        Computing each value of $b_i$ gives us
+        \begin{align*}
+            \mathbf{b_i=5:} && \expp{\pay{i}{R,v_i,b_i=5,b_j}}_{b_j} & =\frac{1}{3}\cdot0+\frac{1}{3}\cdot0+\frac{1}{3}\cdot0 \\
+            &&& =0, \\
+            \mathbf{b_i=10:} && \expp{\pay{i}{R,v_i,b_i=10,b_j}}_{b_j} & =\frac{1}{3}(15-10)+\frac{1}{3}(15-10)+\frac{1}{3}\cdot0\\
+            &&& =\frac{5}{3}, \\
+            \mathbf{b_i=15:} && \expp{\pay{i}{R,v_i,b_i=15,b_j}}_{b_j} & =\frac{1}{3}(15-15)+\frac{1}{3}(15-10)+\frac{1}{3}\cdot0 \\
+            &&& =\frac{5}{3}.
+        \end{align*}
+        Since choosing $b_i=15$ has a higher win probability than any other value and also yields an expected at least as good as the next choice, we should bid $b_i=15$.
+        
+        \item something similar 
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
