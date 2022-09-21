@@ -7,7 +7,7 @@
  \graphicspath{ {./assets/} } 
 \newcommand{\dist}[2]{#1\Leftrightarrow#2}
 \newcommand{\image}[1]{\begin{figure}[H]
-            \includegraphics[scale=.4]{#1}
+            \includegraphics[scale=.7]{#1}
             \centering
         \end{figure}}
 
@@ -59,8 +59,73 @@
         \end{align*}
         Since choosing $b_i=15$ has a higher win probability than any other value and also yields an expected at least as good as the next choice, we should bid $b_i=15$.
         
-        \item something similar 
+        \item Let $m_0$ be the expected revenue earned from the second-price auction with a reserve price of $R=0$. We can compute $m_0$ by summing over all possible values of $\min\{b_i,b_j\}$ (note we take the min since this is a second-price auction) and multiplying by the probability of each value occurring. This gives us
+        $$m_0=\sum_{b_i\in\{5,10,15\} }\sum_{b_j\in\{5,10,15\}}\frac{1}{9}\min\{b_i,b_j\}=\$7.78.$$
+
+        \item If in this case $R=10$ and the expected revenue is $m_{10}$, then we only include values of $b_i,b_j$ if $b_i\geq10$ or $b_j\geq10$. This gives us
+        $$m_{10}=m_0-\frac{1}{9}\min\{b_i=5,b_j=5\}=\$7.22.$$
+
+        \item Let $m_p$ be the expected revenue earned for the object when the seller posts it for price $p$. We can compute $m_p$ by multiplying $p$ by the probability that at least one of the buyers want to buy the object at a price of at least $p$--let $E_p$ be this event. This gives us
+        \begin{align*}
+            m_p & =p\cdot\prob{E_p}, \\
+            m_5 & =5\cdot\prob{E_5}=5\cdot\frac{9}{9}=\$5, \\
+            m_{10} & =10\cdot\prob{E_{10}}=10\cdot\frac{8}{9}=\$8.89, \\
+            m_{15} & =15\cdot\prob{E_{15}}=15\cdot\frac{5}{9}=\$8.33.
+        \end{align*}
     \end{enumerate}
+
+    \item 
+    \begin{enumerate}
+        \item The solution can be obtained by solving the following system of equations:
+        \begin{align*}
+            x+y & =100 \\
+            10+\frac{x}{10} & =\frac{y}{20}+17 \\
+        \end{align*}
+        which yields a Nash equilibrium of $x=80$ and $y=20$.
+
+        \item Let us refer to the new route (i.e. $A\to E\to B$) as Route III. Notice that $10+\frac{t}{10}<17+\frac{t}{20}$ for all $0\leq t\leq100$. Thus, it will always be faster to take Route III over Route II. In other words, Route II is strictly dominated by Route III. It follows that $y=0$ in the Nash equilibrium. We can determine the value of $x,z$ by solving the following system of equations:
+        \begin{align*}
+            x+z & =100 \\
+            10+\frac{x}{10} & =\frac{z}{10}+10 \\
+        \end{align*}
+        which yields a Nash equilibrium of $x=50$, $y=0$, and $z=50$.
+    \end{enumerate}
+
+    \pagebreak
+
+    \item
+    \begin{enumerate}
+        \item The following is a map of the game:
+        \image{assets/q4a.png}
+
+        Notice that taking Route 3 is strictly dominated if there exists a Nash equilibrium such that 
+        \begin{align}
+            4+\frac{x}{20} & \leq12, \label{eqn:eq1} \\ 
+            2+\frac{y}{10} & \leq12. \label{eqn:eq2}
+        \end{align} 
+        If we let $z=0$ for now, then we can solve the following system of equations:
+        \begin{align*}
+            x+y & =200 \\    
+            4+\frac{x}{20} & = 2+\frac{y}{10}
+        \end{align*}
+        which yields $x=120,y=80$. Since these values satisfy equations (\ref{eqn:eq1}) and (\ref{eqn:eq2}), we have a Nash equilibrium of $x=120,y=80,z=0$.
+
+        \item
+        \textbf{Project 1:} We can find a Nash equilibrium by solving the following system of equations:
+        \begin{align*}
+            x+y+z & =200 \\
+            4+\frac{x}{20} & =2+\frac{y}{10} \\
+            2+\frac{y}{10} & =5 
+        \end{align*}
+        which yields a Nash equilibrium of $x=20,y=30,z=150$ and a total travel time of $t_1=x\left(4+\frac{x}{20}\right) + y\left(2+\frac{y}{10}\right) + 5z =1000$ hours.
+
+        \textbf{Project 2:} With the new road, travelers can simply go from $A\to C\to D\to B$ for a constant travel time of $4+0+2$ hours per traveler. This yields a Nash equilibrium of $x=0,y=0,z=0$ and a total travel time of $t_2=200*6=1200$ hours.
+
+        Travelers could also start by taking the $A\to D$ path until $\frac{y}{10}=4$--at which point it becomes more efficient to take the $A\to C$ path. Thus, $y=40$ travelers will take the $A\to D$ path and 160 travelers will take the $A\to C$ path. From this point, all travelers have a choice to take the $C\to B$ path or the $D\to B$ path. Moreover, it is more efficient to take the $C\to B$ path until $\frac{x}{20}=2$--at which point it becomes more efficient to take the $D\to B$ path. Thus, $x=40$ travelers will take the $C\to B$ path and 160 travelers will take the $D\to B$ path. This yields a Nash equilibrium of $x=40,y=40,z=0$ and a total travel time of $t_2=160\cdot4+y\cdot\frac{y}{10}+160\cdot2+x\cdot\frac{x}{20}=200\cdot4+200\cdot2=1200$ hours.
+
+        \textbf{Conclusion:} Project 1 should be chosen over Project 2 because it has a lower total travel time.
+    \end{enumerate}
+
 \end{enumerate}
 
 \end{document}

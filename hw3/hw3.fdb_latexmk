@@ -1,14 +1,17 @@
 # Fdb version 3
-["pdflatex"] 1663704929 "hw3.tex" "hw3.pdf" "hw3" 1663704931
+["pdflatex"] 1663788871 "c:/Users/Owner/school/networks-cs-2850/hw3/hw3.tex" "hw3.pdf" "hw3" 1663788872
   "C:/Users/Owner/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1663347330 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/Owner/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1663700002 11548 e53164009669da361c0239711c7512c5 ""
   "C:/Users/Owner/AppData/Local/MiKTeX/fonts/pk/ljfour/public/fdsymbol/dpi420/FdSymbolB-Book.pk" 1663099394 34616 82d302fa2d812815e25f941dd947d136 ""
   "C:/Users/Owner/AppData/Local/MiKTeX/fonts/pk/ljfour/public/fdsymbol/dpi420/FdSymbolF-Book.pk" 1663704290 28460 931fc45285ead4e19b978878c0fe9ed4 ""
   "C:/Users/Owner/AppData/Local/MiKTeX/fonts/pk/ljfour/public/fdsymbol/dpi600/FdSymbolA-Book.pk" 1663101624 33704 0f7c6c307e96cfb91d882bd9f1b97a79 ""
   "C:/Users/Owner/AppData/Local/MiKTeX/fonts/pk/ljfour/public/fdsymbol/dpi600/FdSymbolB-Book.pk" 1663099398 43928 41294151c6319bdf223a8b1816063664 ""
+  "C:/Users/Owner/AppData/Local/MiKTeX/fonts/pk/ljfour/public/fdsymbol/dpi600/FdSymbolC-Book.pk" 1663099397 39820 b99e471344f538a3d6a007bd035577da ""
   "C:/Users/Owner/AppData/Local/MiKTeX/fonts/pk/ljfour/public/fdsymbol/dpi600/FdSymbolE-Book.pk" 1663099395 31420 59a825532c0639672e37722fa26b9fe9 ""
   "C:/Users/Owner/AppData/Local/MiKTeX/fonts/pk/ljfour/public/fdsymbol/dpi600/FdSymbolF-Book.pk" 1663099396 33832 8aab9f56c34bfe93e38a34cc4237be3c ""
   "C:/Users/Owner/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1663338296 10785261 e188c525ecdb6bc0faa8b98fd823767f ""
+  "C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm0500.tfm" 993062506 1452 d4e3b17acac08070a568f62f3c020c49 ""
+  "C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm0700.tfm" 993062506 1452 97bdc98984cb373fbcd868e2fa55f5f2 ""
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233955454 916 f87d7c45f9c908e672703b83b72241a3 ""
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1233955454 924 9904cf1d39e9767e7a3622f2a125a565 ""
@@ -146,8 +149,10 @@
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "C:/Users/Owner/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "hw3.aux" 1663704930 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "hw3.tex" 1663704905 4452 6a9331375ae15a4de27d3728bfdcd4df ""
+  "assets/q4a.png" 1663785454 21238 b058b7ffb1c00b447cf68a8d65adea12 ""
+  "c:/Users/Owner/school/networks-cs-2850/hw3/hw3.tex" 1663788870 8988 93d1a1d6205b2ed21deecc6215000f3b ""
+  "hw3.aux" 1663788872 86 b7663a54854e6c2a26403487c9ab91f7 "pdflatex"
+  "hw3.tex" 1663788870 8988 93d1a1d6205b2ed21deecc6215000f3b ""
   (generated)
   "hw3.aux"
   "hw3.log"
