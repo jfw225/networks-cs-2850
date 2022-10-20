@@ -136,8 +136,49 @@
             F & 0 & 0.00 & 7 & 0.15 \\
             \hline
         \end{tabular}\end{center}
+
+        \pagebreak
+
+        \item We would expect option 2 to yield a higher hub score for node $Y$, which would in turn yield a higher authority score for node $X$ After $k=2$ steps of the computation with each addition, we get the following table of values
+        \begin{center}\begin{tabular}{||c | c | c||} 
+            \hline
+            Node & Normalized Auth Opt 1 & Normalized Auth Opt 2 \\ [0.5ex] 
+            \hline\hline
+            A & 0.58 & 0.47 \\
+            \hline
+            B & 0.37 & 0.37 \\
+            \hline
+            X & 0.05 & 0.16 \\
+            \hline
+        \end{tabular}\end{center}
+        which are aligned with our expectations.
+
+        \item My strategy is to connect $Z$ to $A,C,X,Y$, connect $Y$ to $B,X,Z$ and connect $X$ to $Y,X$ which yields the following table after $k=2$ rounds:
+        \begin{center}\begin{tabular}{||c | c | c | c | c ||} 
+            \hline
+            Node & Auth & Normalized Auth & Hub & Normalized Hub \\ [0.5ex] 
+            \hline\hline
+            A & 25 & 0.26 & 0 & 0.00 \\
+            \hline
+            B & 17 & 0.18 & 0 & 0.00 \\
+            \hline
+            C & 10 & 0.10 & 25 & 0.09 \\
+            \hline
+            D & 0 & 0.00 & 25 & 0.09 \\
+            \hline
+            E & 0 & 0.00 & 42 & 0.16 \\
+            \hline
+            F & 0 & 0.0 & 17 & 0.06 \\
+            \hline
+            X & 22 & 0.23 & 37 & 0.14 \\
+            \hline
+            Y & 15 & 0.16 & 46 & 0.17 \\
+            \hline
+            Z & 7 & 0.07 & 27 & 0.27 \\
+            \hline
+        \end{tabular}\end{center}
+        From this table, it is clear that $A$ has the highest authority, and $X$ has the second-highest authority.
     \end{enumerate}
-   
 
 \end{enumerate}
 

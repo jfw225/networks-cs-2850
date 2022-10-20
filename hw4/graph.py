@@ -2,68 +2,82 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 from matplotlib import patches
+import pandas as pd
 
 from utils import *
 
 
-def q():
-    # create the graph
-    graph = nx.Graph()
-    graph.add_nodes_from(base_graph)
+def q(graph):
+    transpose = {
+        key: [k for k, v in graph.items() if key in v] for key in graph
+    }
 
-    h_allies, l_allies = list(), list()
-    for x in base_graph:
-        dh = nx.shortest_path_length(base_graph, x, H)
-        di = nx.shortest_path_length(base_graph, x, I)
+    def appendToDataFrame(df, auth, hub, step):
+        df.loc[step*4] = auth
+        df.rename(
+            index={step*4: "Step {}: unnormalized auth".format(step)}, inplace=True)
 
-        # if `x` is closer to `H` than `I`, then it is an ally of `H`
-        if dh < di:
-            h_allies.append(x)
-            graph.add_edge(x, H, weight=1)
+        df.loc[step*4 + 1] = hub
+        df.rename(
+            index={step*4 + 1: "Step {}: unnormalized hub".format(step)}, inplace=True)
 
-        # if `x` is closer to `I` than `H`, then it is an ally of `I`
-        else:
-            l_allies.append(x)
-            graph.add_edge(x, I, weight=1)
+        # df.loc[step*4+2] = [str(i) + "/" + str(sum(auth)) for i in auth]
+        df.loc[step*4+2] = [round(100 * i / sum(auth)) / 100 for i in auth]
+        df.rename(
+            index={step*4+2: "Step {}: normalized auth".format(step)}, inplace=True)
 
-    pos = nx.spring_layout(graph)
-    nx.draw_networkx_nodes(graph, pos, cmap=plt.get_cmap('jet'),
-                           node_size=500)
-    nx.draw_networkx_labels(graph, pos)
-    nx.draw_networkx_edges(graph, pos,
-                           edge_color='b', arrows=False)
-    draw_and_close_on_input()
+        # df.loc[step*4+3] = [str(i) + "/" + str(sum(hub)) for i in hub]
+        df.loc[step*4+3] = [round(100 * i / sum(hub)) / 100 for i in hub]
+        df.rename(
+            index={step*4+3: "Step {}: normalized hub".format(step)}, inplace=True)
+
+    STEPS = 2
+    df = pd.DataFrame(columns=graph.keys())
+
+    auth = [1 for i in range(len(graph))]
+    hub = [1 for i in range(len(graph))]
+    df.loc[0] = auth
+    df.rename(index={0: "Step 0: initial auth"}, inplace=True)
+    df.loc[1] = hub
+    df.rename(index={1: "Step 0: initial hub"}, inplace=True)
+    for step in range(STEPS):
+        for key, value in transpose.items():
+            auth[ord(key) - 65] = sum(hub[ord(v)-65] for v in value)
+
+        for key, value in graph.items():
+            hub[ord(key) - 65] = sum(auth[ord(v)-65] for v in value)
+
+        appendToDataFrame(df, auth, hub, step+1)
+
+    print(df)
 
 
-def q():
-    # create the graph
-    graph = nx.Graph()
+graph = {
+    A: [],
+    B: [],
+    C: [A],
+    D: [A],
+    E: [A, B],
+    F: [B]
+}
 
-    # create a list of edges from A to B, A to C, C to B, A to D, D to B
-    route1 = [((A, C), "4"), ((C, B), r"$\frac{x}{20}$")]
-    route2 = [((A, D), r"$\frac{y}{10}$"), ((D, B), "2")]
-    route3 = [((A, B), "12")]
-    route4 = [((C, D), "0")]
+option1 = {**graph,
+           G: [],
+           H: [G]
+           }
 
-    # add the edges to the graph
-    graph.add_edges_from([e for e, _ in route1])
-    graph.add_edges_from([e for e, _ in route2])
-    graph.add_edges_from([e for e, _ in route3])
-    graph.add_edges_from([e for e, _ in route4])
+option2 = {**graph,
+           G: [],
+           H: [G, A, B]
+           }
 
-    pos = nx.spring_layout(graph)
-    print(pos)
-    nx.draw_networkx_nodes(graph, pos, cmap=plt.get_cmap('jet'),
-                           node_size=500)
-    nx.draw_networkx_labels(graph, pos)
-    nx.draw_networkx_edges(graph, pos,  connectionstyle="arc3,rad=0.1",
-                           edge_color='b', arrows=False)
-    nx.draw_networkx_edge_labels(graph, pos, edge_labels=dict(route1))
-    nx.draw_networkx_edge_labels(graph, pos, edge_labels=dict(route2))
-    nx.draw_networkx_edge_labels(graph, pos, edge_labels=dict(route3))
-    nx.draw_networkx_edge_labels(graph, pos, edge_labels=dict(route4))
-    draw_and_close_on_input()
-
+option3 = {**graph,
+           G: [G, H],
+           H: [G, I, B],
+           I: [G, H, A, C],
+           }
 
 if __name__ == '__main__':
-    q()
+    # q(option1)
+    # q(option2)
+    q(option3)

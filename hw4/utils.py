@@ -10,6 +10,10 @@ E = "E"
 F = "F"
 G = "G"
 H = "H"
+I = "I"
+
+X = "X"
+Y = "Y"
 
 
 def draw_and_close_on_input():
