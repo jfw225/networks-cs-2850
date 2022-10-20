@@ -1,0 +1,144 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,enumerate,xcolor,graphicx,amsthm,url,fdsymbol,tikz,enumitem}
+\usepackage{algorithm, algpseudocode, float}
+\usepackage{multirow, array}
+
+ \graphicspath{ {./assets/} } 
+\newcommand{\dist}[2]{#1\Leftrightarrow#2}
+\newcommand{\image}[1]{\begin{figure}[H]
+            \includegraphics[scale=.7]{#1}
+            \centering
+        \end{figure}}
+
+\newcommand{\pay}[2]{\psi_{#1}\left(#2\right)}
+\newcommand{\prob}[1]{\mathbb{P}\left( #1 \right)}
+\newcommand{\pmf}[2]{p_{#1}\left( #2 \right)}
+\newcommand{\pdf}[2]{f_{#1}\left( #2 \right)}
+\newcommand{\cdf}[2]{F_{#1}\left( #2 \right)}
+\newcommand{\modd}[1]{~\mathrm{mod}\,\left[ #1 \right]}
+\newcommand{\expp}[1]{\mathbb{E}\left[ #1 \right]}
+\newcommand{\varr}[1]{\mathbb{V}\left[ #1 \right]}
+\newcommand{\covv}[1]{\mathbb{C}\left[ #1 \right]}
+
+\title{CS 2850 -- Networks HW 4}
+\author{jfw225 }
+\date{October 2022}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+    \item \begin{enumerate}
+            \item The largest strongly connected component of this graph is the set $\{5,6,7,8,9,10\}$.
+            
+            \item If we were to add a link from node 14 to node 2, the largest strongly connected component would become the set 
+            $$\{2,3,4,5,6,7,8,9,10,11,12,14\}$$
+            which is the largest possible set of strongly connected components from a single-link addition. Without loss of generality with respect to node 14 or 2, note that linking 14 to 1 is not the solution because 4 would be inaccessible. Similarly, linking 14 to 13 would do the same.
+            
+            \item From the original set that we mentioned in part (a), notice that each of those nodes depend on the link between 7 and 8 to be strongly connected. If we were to remove that link, there would be no strongly connected component with a larger size than one. Thus, deleting the link between 7 and 8 is the solution.
+
+        \end{enumerate}
+
+    \item After one iteration of the Basic PageRank Update Rule, we get the following table of values:
+    \begin{center}\begin{tabular}{||c | c||} 
+        \hline
+        Node & Value \\ [0.5ex] 
+        \hline\hline
+        A & 4/17 \\
+        \hline
+        B & 3/17 \\
+        \hline
+        C & 3/17 \\
+        \hline
+        D & 2/17 \\
+        \hline
+        E & 4/17 \\
+        \hline
+        F & 1/17 \\
+        \hline\hline
+        \textbf{Sum} & 17/17 \\ [1ex] 
+        \hline
+    \end{tabular}\end{center}
+    Although they do add to 1, the probabilities are not the same as the original values. Therefore, these numbers do not form an equilibrium.
+
+    \pagebreak
+
+    \item \begin{enumerate}
+        \item The following table shows the value of each node in terms of $x$:
+        \begin{center}\begin{tabular}{||c | c||} 
+            \hline
+            Node & Value in Terms of $x$ \\ [0.5ex] 
+            \hline\hline
+            A & $x$ \\
+            \hline
+            B & $x/2$ \\
+            \hline
+            C & $x/2$ \\
+            \hline
+            D & $x/4$ \\
+            \hline
+            E & $x/2$ \\
+            \hline
+            F & $x/4$ \\
+            \hline
+            G & $5x/8$ \\
+            \hline
+            H & $3x/8$ \\
+            \hline
+        \end{tabular}\end{center}
+
+        \item We can solve for $x$ by summing these values and setting them equal to 1. We get the following equation:
+        $$x + \frac{x}{2} + \frac{x}{2} + \frac{x}{4} + \frac{x}{2} + \frac{x}{4} + \frac{5x}{8} + \frac{3x}{8} = 1$$
+        which yields $x=\frac{1}{4}$. Thus, our values become
+        \begin{center}\begin{tabular}{||c | c||} 
+            \hline
+            Node & Value in Terms of $x$ \\ [0.5ex] 
+            \hline\hline
+            A & $\frac{1}{4}$ \\ [0.5ex]
+            \hline
+            B & $\frac{1}{8}$ \\ [0.5ex]
+            \hline
+            C & $\frac{1}{8}$ \\ [0.5ex]
+            \hline
+            D & $\frac{1}{16}$ \\ [0.5ex]
+            \hline
+            E & $\frac{1}{8}$ \\ [0.5ex]
+            \hline
+            F & $\frac{1}{16}$ \\ [0.5ex]
+            \hline
+            G & $\frac{5}{16}$ \\ [0.5ex]
+            \hline
+            H & $\frac{3}{16}$ \\ [0.5ex]
+            \hline\hline
+            \textbf{Sum} & 1 \\ [1ex] 
+            \hline
+        \end{tabular}\end{center}
+    \end{enumerate}
+
+    \item \begin{enumerate}
+        \item After $k=2$ steps of the computation, we get the following table of values:
+        \begin{center}\begin{tabular}{||c | c | c | c | c||} 
+            \hline
+            Node & Auth & Normalized Auth & Hub & Normalized Hub \\ [0.5ex] 
+            \hline\hline
+            A & 11 & 0.61 & 0 & 0.00 \\
+            \hline
+            B & 7 & 0.39 & 0 & 0.00 \\
+            \hline
+            C & 0 & 0.00 & 11 & 0.23 \\
+            \hline
+            D & 0 & 0.00 & 11 & 0.23 \\
+            \hline
+            E & 0 & 0.00 & 18 & 0.38 \\
+            \hline 
+            F & 0 & 0.00 & 7 & 0.15 \\
+            \hline
+        \end{tabular}\end{center}
+    \end{enumerate}
+   
+
+\end{enumerate}
+
+\end{document}

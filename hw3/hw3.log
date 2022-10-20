@@ -540,8 +540,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
 (Font)              scaled to size 12.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
-(Font)              scaled to size 8.0pt on input line 30.
-LaTeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
+(Font)         TeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
 (Font)              scaled to size 6.0pt on input line 30.
 LaTeX Font Info:    Font shape `U/FdSymbolC/m/n' will be
 (Font)              scaled to size 12.0pt on input line 30.
@@ -615,8 +614,15 @@ File: assets/q4a.png Graphic file (type png)
 <use assets/q4a.png>
 Package pdftex.def Info: assets/q4a.png  used on input line 99.
 (pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
- [4 <./assets/q4a.png>] [5] (hw3.aux) ) 
-Here is how much of TeX's memory you used:
+
+Runaway argument?
+ 
+! Paragraph ended before \align* was complete.
+<to be read again> 
+                   \par 
+l.102 
+      
+? 
  17203 strings out of 475389
  325888 string characters out of 2777000
  613117 words of memory out of 3000000
