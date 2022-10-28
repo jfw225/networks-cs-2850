@@ -21,13 +21,13 @@ def q(graph):
         df.rename(
             index={step*4 + 1: "Step {}: unnormalized hub".format(step)}, inplace=True)
 
-        # df.loc[step*4+2] = [str(i) + "/" + str(sum(auth)) for i in auth]
-        df.loc[step*4+2] = [round(100 * i / sum(auth)) / 100 for i in auth]
+        df.loc[step*4+2] = [str(i) + "/" + str(sum(auth)) for i in auth]
+        # df.loc[step*4+2] = [round(100 * i / sum(auth)) / 100 for i in auth]
         df.rename(
             index={step*4+2: "Step {}: normalized auth".format(step)}, inplace=True)
 
-        # df.loc[step*4+3] = [str(i) + "/" + str(sum(hub)) for i in hub]
-        df.loc[step*4+3] = [round(100 * i / sum(hub)) / 100 for i in hub]
+        df.loc[step*4+3] = [str(i) + "/" + str(sum(hub)) for i in hub]
+        # df.loc[step*4+3] = [round(100 * i / sum(hub)) / 100 for i in hub]
         df.rename(
             index={step*4+3: "Step {}: normalized hub".format(step)}, inplace=True)
 
@@ -73,8 +73,8 @@ option2 = {**graph,
 
 option3 = {**graph,
            G: [G, H],
-           H: [G, I, B],
-           I: [G, H, A, C],
+           H: [G, I, B, E],
+           I: [G, H, A, C, E],
            }
 
 if __name__ == '__main__':
