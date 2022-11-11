@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,enumerate,xcolor,graphicx,amsthm,url,fdsymbol,tikz,enumitem}
+\usepackage{algorithm, algpseudocode, float}
+\usepackage{multirow, array}
+
+ \graphicspath{ {./assets/} } 
+\newcommand{\dist}[2]{#1\Leftrightarrow#2}
+\newcommand{\image}[1]{\begin{figure}[H]
+            \includegraphics[scale=.7]{#1}
+            \centering
+        \end{figure}}
+
+\newcommand{\pay}[2]{\psi_{#1}\left(#2\right)}
+\newcommand{\prob}[1]{\mathbb{P}\left( #1 \right)}
+\newcommand{\pmf}[2]{p_{#1}\left( #2 \right)}
+\newcommand{\pdf}[2]{f_{#1}\left( #2 \right)}
+\newcommand{\cdf}[2]{F_{#1}\left( #2 \right)}
+\newcommand{\modd}[1]{~\mathrm{mod}\,\left[ #1 \right]}
+\newcommand{\expp}[1]{\mathbb{E}\left[ #1 \right]}
+\newcommand{\varr}[1]{\mathbb{V}\left[ #1 \right]}
+\newcommand{\covv}[1]{\mathbb{C}\left[ #1 \right]}
+
+\title{CS 2850 -- Networks HW 4}
+\author{jfw225 }
+\date{October 2022}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+    \item \begin{enumerate}
+        \item Buyer $y$ will bid the highest value at 7, and thus, win the auction because each buyer bids fairly in a second price auction. In addition, $y$ will pay the second highest bid which is $5$.
+        
+        \item We start with creating two other fictional items $b,c$. After running the VCG procedure, we observe that item $a$ goes to $y$ for 5 as before, item $b$ goes to $x$ at 0, and item $c$ goes to $z$ at 0. Note that $5$ is the harm that $y$ causes to $x,z$ because $5$ is the value that $a$ would be obtained at without $y$.
+    \end{enumerate}
+
+    \item \begin{enumerate}
+        \item The perfect matching that is yielded by treating the \textsc{Allocating Slots to Advertisers} problem as a matching market is the following: $x\to a$ at 0, $y\to c$ at 8, and $z\to b$ at 23.
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}

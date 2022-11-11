@@ -1,0 +1,3 @@
+
+default:
+	latexmk -pdf -pvc
