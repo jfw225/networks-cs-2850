@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,enumerate,xcolor,graphicx,amsthm,url,fdsymbol,tikz,enumitem}
+\usepackage{algorithm, algpseudocode, float}
+\usepackage{multirow, array}
+
+ \graphicspath{ {./assets/} } 
+\newcommand{\dist}[2]{#1\Leftrightarrow#2}
+\newcommand{\image}[1]{\begin{figure}[H]
+            \includegraphics[scale=.4]{#1}
+            \centering
+        \end{figure}}
+
+\newcommand{\pay}[2]{\psi_{#1}\left(#2\right)}
+\newcommand{\prob}[1]{\mathbb{P}\left( #1 \right)}
+\newcommand{\pmf}[2]{p_{#1}\left( #2 \right)}
+\newcommand{\pdf}[2]{f_{#1}\left( #2 \right)}
+\newcommand{\cdf}[2]{F_{#1}\left( #2 \right)}
+\newcommand{\modd}[1]{~\mathrm{mod}\,\left[ #1 \right]}
+\newcommand{\expp}[1]{\mathbb{E}\left[ #1 \right]}
+\newcommand{\varr}[1]{\mathbb{V}\left[ #1 \right]}
+\newcommand{\covv}[1]{\mathbb{C}\left[ #1 \right]}
+
+\title{CS 2850 -- Networks HW 7}
+\author{jfw225}
+\date{November 2022}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+    \item
+    \begin{enumerate}
+        \item Solving the equation yields equilibrium points of 0, 0.25, and 0.75.
+        \item 0.25 is the only unstable equilibrium while the others are all stable.
+        \item The product will become more popular over time because $z=0.3$ is between 0.25 and 0.75, and thus, it will grow in popularity over time.
+        \item Our answer would not change it the value changed to $z=0.5$ because the function is still increasing between 0.25 and 0.75.
+    \end{enumerate}
+    \item
+    \begin{enumerate}
+        \item For $z=1/4$, we have
+        \begin{align*}
+            r(1/4)\,f(1/4) & =(1-1/4)\cdot\min(1,1) \\
+            & =3/4.
+        \end{align*}
+        Since $3/4>7/16$, the fraction of interested population will be increasing. Therefore, $z=1/4$ is not an equilibrium.
+
+        \item When $z<1/4$, we have
+        \begin{align*}
+            7/16=r(z)\,f(z) & =(1-z)\cdot\min(1,4z) \\
+            7/16= & =(1-z)\cdot 4z \\
+            7/16= & =4z-4z^2.
+        \end{align*}
+        Solving this equation yields $z=0,1/8$ as the equilibrium solutions.
+        
+        \item When $z>1/4$, we have
+        \begin{align*}
+            7/16=r(z)\,f(z) & =(1-z)\cdot\min(1,4z) \\
+            7/16= & =(1-z)\cdot 1 \\
+            7/16= & =1-z.
+        \end{align*}
+        Solving this equation yields $z=9/16$ as an equilibrium solution.
+        
+        \pagebreak
+        \item We will observe that $z=1/4>1/8$ will grow to $z=9/16$ as shown in the following graph:
+        
+        \image{q2d.png}
+    \end{enumerate}
+    
+    \item Let $n$ be the number of articles that it takes to receive $k$ views. Then it is theorized that $n=\frac{c}{k^{1.5}}$ for some constant $c$.
+    \begin{enumerate}
+        \item Let $n=200$ and $k=25$. Then we have
+        $$n=\frac{c}{k^{1.5}} \implies 200=\frac{c}{25^{1.5}} \implies c=200\cdot25^{1.5}=25,000.$$
+        \item Let $n=10$ and $k=\max(100,25)=100$. Then we have
+        $$n=\frac{c}{k^{1.5}} \implies 10=\frac{c}{100^{1.5}} \implies c=10\cdot100^{1.5}=10,000.$$
+
+        \pagebreak
+
+        \item The question is equivalent to asking if there is some function $f$ whose parent is the power law such that $f(100)=40$ and $f(200)=10$. Using this information, we create the following two equations:
+        \begin{align*}
+            40 & =\frac{b}{100^a} \\
+            10 & =\frac{b}{200^a} \\
+            \implies 10 & =\frac{40\cdot100^a}{200^a} \\
+            \frac{1}{4} & =\left(\frac{1}{2}\right)^a \\
+            \implies a & =2 \\
+            \implies b & =40\cdot100^2=400,000.
+        \end{align*}
+        Checking the answer, we have
+
+        \image{q3c.png}
+    \end{enumerate}
+
+    \item
+    \begin{enumerate}
+        \item Observe that it is impossible for any graph that is produced by the \textsc{rich-get-richer} algorithm to contain a node who does not have exactly one outbound edge (other than node 1 because it is the oldest). Graph (a) could not have been produced from the algorithm because there are nodes that have more than one outbound edge. Graph (c) has a node other than node 1 with zero outbound edges. Thus, the only graphs that could have been produced by the algorithm are (b) and (d).
+        
+        \item A value of $p=1/2$ means that a node is equally as likely to connect to some node $i$ or copy the decision of node $i$. In graph (d), none of the nodes made the former choice--each node chose node $i$. Thus, it is more likely that (b) was produced by the algorithm.
+    \end{enumerate}
+\end{enumerate}
+
+\end{document}
